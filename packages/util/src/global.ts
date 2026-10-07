@@ -8,8 +8,9 @@ import { Context, Effect, Layer } from "effect"
 import { roots } from "#global-roots"
 import { Flock } from "./flock.js"
 import { makeGlobalNode } from "./effect/app-node.js"
+import { Brand } from "./brand.js"
 
-const app = "opencode"
+const app = Brand.configDirName
 const { data, cache, config, state, tmp } = roots(app)
 
 const paths = {
